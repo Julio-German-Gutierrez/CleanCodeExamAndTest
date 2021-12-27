@@ -3,8 +3,10 @@ using CleanCodeExam.Models;
 
 namespace CleanCodeExam.Controllers
 {
-    public class MastermindGame
+    public class MastermindGame : IGame
     {
+        static MastermindGame SingletonCopy { get; set; } = null;
+
         ILogic _logic;
         IViews _views;
         IData _dataScore;
@@ -16,7 +18,16 @@ namespace CleanCodeExam.Controllers
 
         string FOUR_BULLS { get; set; }
 
-        public MastermindGame(ILogic gameLogic, IViews views, IData dataScore)
+        public static MastermindGame Builder(ILogic gameLogic, IViews views, IData dataScore)
+        {
+            if (SingletonCopy == null)
+            {
+                SingletonCopy = new MastermindGame(gameLogic, views, dataScore);
+            }
+            return SingletonCopy;
+        }
+
+        private MastermindGame(ILogic gameLogic, IViews views, IData dataScore)
         {
             _logic = gameLogic;
             _views = views;

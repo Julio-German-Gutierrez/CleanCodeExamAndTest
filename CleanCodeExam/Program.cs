@@ -9,12 +9,8 @@ namespace MooGame
     {
         public static void Main(string[] args)
         {
-            var cowAndBulls = new MastermindGame
-                (
-                    new FourDigitsLogic(),
-                    new ConsoleViews(),
-                    new FileData("Scores.txt")
-                );
+            var cowAndBulls = GameBuilder
+                .ConsoleBuilder(SelectConsoleGame.FOUR_DIGITS_COWSANDBULLS);
 
             cowAndBulls.Start();
         }
