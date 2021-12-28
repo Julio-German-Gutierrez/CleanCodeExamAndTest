@@ -20,7 +20,7 @@ namespace CleanCodeExamTEST.GameFlow
             {
                 //Arrange
                 Exception error = null;
-                MastermindGame game = new MastermindGame
+                MastermindGame game = MastermindGame.Builder
                     (
                         new FourDigitsLogicFake(),
                         new ConsoleViewsFake(),
@@ -30,7 +30,7 @@ namespace CleanCodeExamTEST.GameFlow
                 //Act
                 try
                 {
-                    game.Start();
+                    game.Start().End();
                 }
                 catch (Exception e)
                 {
