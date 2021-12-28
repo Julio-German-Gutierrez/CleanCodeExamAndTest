@@ -34,12 +34,13 @@ namespace CleanCodeExam.Controllers
             FOUR_BULLS = _logic.GetRightAnswer();
         }
 
-        public void Start()
+        public IGame Start()
         {
             _views.ClearView();
             PlayerName = _views.EnterPlayerName();
 
             GameLoop();
+            return this;
         }
 
         void GameLoop()
@@ -56,6 +57,12 @@ namespace CleanCodeExam.Controllers
             SaveAndPresentScore();
 
             if (_views.PlayAgain()) GameLoop();
+        }
+
+        public IGame End()
+        {
+            SingletonCopy = null;
+            return this;
         }
 
         void SaveAndPresentScore()

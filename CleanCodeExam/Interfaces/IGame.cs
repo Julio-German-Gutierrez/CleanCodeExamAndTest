@@ -8,6 +8,7 @@ namespace CleanCodeExam.Interfaces
 {
     public interface IGame
     {
-        void Start();
+        IGame Start();
+        IGame End();
     }
 }

@@ -10,8 +10,7 @@ namespace MooGame
     {
         public static void Main(string[] args)
         {
-            var multiGames = new MultiConsoleGames();
-            multiGames.GameSelector();
+            MultiConsoleGames.Run();
         }
     }
 }

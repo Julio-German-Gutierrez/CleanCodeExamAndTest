@@ -26,13 +26,21 @@ namespace CleanCodeExam.Factories
                             );
                     }
                 case SelectConsoleGame.SIX_DIGITS_COWSANDBULLS:
-                    break;
-                case SelectConsoleGame.HIDDEN_NUMBER:
-                    break;
+                    {
+                        return MastermindGame.Builder
+                            (
+                                new SixDigitsLogic(),
+                                new ConsoleViews(),
+                                new FileData("ScoresSix.txt")
+                            );
+                    }
+                case SelectConsoleGame.NUMBER_MASTER:
+                    {
+                        return NumberMaster.Builder();
+                    }
                 default:
-                    break;
+                    return null;
             }
-            return null;
         }
     }
 
@@ -40,6 +48,6 @@ namespace CleanCodeExam.Factories
     {
         FOUR_DIGITS_COWSANDBULLS,
         SIX_DIGITS_COWSANDBULLS,
-        HIDDEN_NUMBER
+        NUMBER_MASTER
     }
 }
