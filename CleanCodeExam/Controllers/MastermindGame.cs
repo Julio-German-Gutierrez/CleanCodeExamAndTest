@@ -21,9 +21,8 @@ namespace CleanCodeExam.Controllers
         public static MastermindGame Builder(ILogic gameLogic, IViews views, IData dataScore)
         {
             if (SingletonCopy == null)
-            {
                 SingletonCopy = new MastermindGame(gameLogic, views, dataScore);
-            }
+
             return SingletonCopy;
         }
 

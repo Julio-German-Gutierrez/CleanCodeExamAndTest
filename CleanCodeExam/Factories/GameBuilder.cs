@@ -1,4 +1,5 @@
-﻿using CleanCodeExam.Interfaces;
+﻿using CleanCodeExam.Controllers;
+using CleanCodeExam.Interfaces;
 using CleanCodeExam.Modules;
 using CleanCodeExam.Views;
 using System;
@@ -7,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanCodeExam.Controllers
+namespace CleanCodeExam.Factories
 {
     public static class GameBuilder
     {
