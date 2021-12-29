@@ -14,7 +14,7 @@ namespace CleanCodeExam.Controllers
 
         public static void Run()
         {
-            char selection = EXIT;
+            char selection = '0';
             while ((selection = GameSelectionMenu()) != EXIT)
             {
                 var game = CreateGame(selection);
