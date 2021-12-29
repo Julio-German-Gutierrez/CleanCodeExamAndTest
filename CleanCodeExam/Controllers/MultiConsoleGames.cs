@@ -15,7 +15,7 @@ namespace CleanCodeExam.Controllers
         public static void Run()
         {
             char selection = EXIT;
-            while ( (selection = GameSelectionMenu()) != EXIT)
+            while ((selection = GameSelectionMenu()) != EXIT)
             {
                 CreateGame(selection)
                     .Start()
@@ -50,26 +50,12 @@ namespace CleanCodeExam.Controllers
             return false;
         }
 
-        static IGame CreateGame(char selection)
+        static IGame CreateGame(char selection) => selection switch
         {
-            switch (selection)
-            {
-                case '1':
-                    {
-                        return GameBuilder.ConsoleBuilder(SelectConsoleGame.FOUR_DIGITS_COWSANDBULLS);
-                    }
-                case '2':
-                    {
-                        return GameBuilder.ConsoleBuilder(SelectConsoleGame.SIX_DIGITS_COWSANDBULLS);
-                    }
-                case '3':
-                    {
-                        return GameBuilder.ConsoleBuilder(SelectConsoleGame.NUMBER_MASTER);
-                    }
-                default:
-                    break;
-            }
-            return null;
-        }
+            '1' => GameBuilder.ConsoleBuilder(SelectConsoleGame.FOUR_DIGITS_COWSANDBULLS),
+            '2' => GameBuilder.ConsoleBuilder(SelectConsoleGame.SIX_DIGITS_COWSANDBULLS),
+            '3' => GameBuilder.ConsoleBuilder(SelectConsoleGame.NUMBER_MASTER),
+            _ => null
+        };
     }
 }
