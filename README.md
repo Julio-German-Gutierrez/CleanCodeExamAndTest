@@ -8,7 +8,7 @@
 * [The Task](#the-task)
 * [Refactoring](#refactoring)
 * [Testning](#testning)
-* [Original Code](#original-code)
+* [Original Smelly Code](#original-smelly-code)
 * [My Solution](#my-solution)
 * [Overview](#overview)
 * [The New Refactoring](#the-new-refactoring)
@@ -32,7 +32,7 @@ The program must be made "more beautiful" by performing refactoring on appropria
 ### Testning
 Tests must be written for the program logic code. Since it calls IO and UI code, these may need to be Mock-Object-implemented to be able to perform the tests. Perhaps the method that generates the random numbers also needs to be mocked, so that tests on the program logic can be performed with known "random" numbers.
 
-## Original Code
+## Original Smelly Code
 ``` C#
 using System;
 using System.IO;
