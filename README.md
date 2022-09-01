@@ -216,4 +216,4 @@ The MastermindGame (Game class) controls the flow of the program and it does it 
 Each of these three implementations (Views, Logic and Data) are stateless. The game data is administrated by the MastermindGame class. With this design, one could create a mobile or WPF version and would only need to implement the IViews interface. In the same spirit, it would only take an implementation of ILogic to create or update the game’s logic. The same abstraction applies to the data access.
 
 ## Final Thoughts
-It is very difficult to address all the work done in a short half-page document, as this is supposed to be. I hope the code will be self explanatory.
+It is very difficult to address all the work done in a short one page document, as this is supposed to be. I hope the code will be self explanatory.
