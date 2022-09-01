@@ -1,4 +1,5 @@
-# Clean Code - "Exam and Test"
+# CleanCodeExamAndTest
+Clean code and refactoring exam for ITHS University College
 
 ![image](tittle_image.jpg)
 
