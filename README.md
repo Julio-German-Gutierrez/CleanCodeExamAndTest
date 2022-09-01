@@ -210,6 +210,8 @@ I decided to divide the program in four parts:<br/>
 * The Logic -> (FourDigitsLogic ILogic)
 * The Data Access -> (FileData IData)
 
+![image](code-clean-exam.jpg)
+
 ### The New Refactoring
 The MastermindGame (Game class) controls the flow of the program and it does it through its dependencies (Injected). It handles basic information like the player’s name, guesses and attempts, the game’s goal, etc. It uses its dependencies (abstractions) to interact with the user (IViews), consult game’s logic (ILogic) and to read and write the score data (IData).
 
