@@ -1,5 +1,6 @@
 # Clean Code - "Exam and Test"
 
+![image](tittle_image.jpg)
 
 ## Table of contents
 * [.NET Clean Code Examination](#.net-clean-code-examination)
