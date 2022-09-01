@@ -3,12 +3,15 @@
 ![image](tittle_image.jpg)
 
 ## Table of contents
+### About the exam
 * [.NET Clean Code Examination](#.net-clean-code-examination)
 * [The Program](#the-program)
 * [The Task](#the-task)
 * [Refactoring](#refactoring)
 * [Testning](#testning)
 * [Original Smelly Code](#original-smelly-code)
+
+### About my solution
 * [My Solution](#my-solution)
 * [Overview](#overview)
 * [The New Refactoring](#the-new-refactoring)
@@ -210,7 +213,7 @@ I decided to divide the program in four parts:<br/>
 * The Logic -> (FourDigitsLogic ILogic)
 * The Data Access -> (FileData IData)
 
-![image](code-clean-exam.jpg)
+![image](clean-code-exam.jpg)
 
 ### The New Refactoring
 The MastermindGame (Game class) controls the flow of the program and it does it through its dependencies (Injected). It handles basic information like the player’s name, guesses and attempts, the game’s goal, etc. It uses its dependencies (abstractions) to interact with the user (IViews), consult game’s logic (ILogic) and to read and write the score data (IData).
